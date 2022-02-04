@@ -4,11 +4,12 @@
 
   <table border="1">
     <tr>
-      <td>ID</td>
-      <td>NAME</td>
-      <td>CONTACT</td>
-      <td>ADDRESS</td>
-      <td>Actions</td>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Contact</td>
+      <td>Address</td>
+      <td>Update</td>
+      <td>Delete</td>
     </tr>
     <tr v-for="item in restaurant" :key="item.id">
       <td>{{ item.id }}</td>
@@ -16,6 +17,7 @@
       <td>{{ item.contact }}</td>
       <td>{{ item.address }}</td>
       <td><router-link :to="'/update/'+item.id">Update</router-link></td>
+      <td><button @click="deleteRestaurent(item.id)">Delete</button></td>
     </tr>
   </table>
 
@@ -36,15 +38,26 @@ export default {
     }
   },
   async mounted() {
-    let user=localStorage.getItem("user-info");
-    this.name=JSON.parse(user).name;
-    if (!user){
-      this.$router.push({ name:"SignUp" });
-    }
+    this.loadData();
+  },
+  methods:{
+    async deleteRestaurent(id){
+      let result = await axios.delete("http://localhost:3000/restaurent/"+id);
+      if (result.status==200){
+        this.loadData();
+      }
+    },
+    async loadData(){
+      let user=localStorage.getItem("user-info");
+      this.name=JSON.parse(user).name;
+      if (!user){
+        this.$router.push({ name:"SignUp" });
+      }
 
-    let result = await axios.get("http://localhost:3000/restaurent");
-    console.warn(result);
-    this.restaurant=result.data;
+      let result = await axios.get("http://localhost:3000/restaurent");
+      // console.warn(result);
+      this.restaurant=result.data;
+    }
   }
 }
 </script>

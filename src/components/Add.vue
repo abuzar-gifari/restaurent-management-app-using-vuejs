@@ -1,11 +1,11 @@
 <template>
   <Header/>
-  <h1>Hello user welcome to Add Restaurent page page</h1>
+  <h1>Hello user welcome to Add Restaurent page</h1>
 
   <form action="" method="post" class="add">
-    <input type="text" name="name" placeholder="Enter Your Name" v-model="restaurent.name">
-    <input type="text" name="contact" placeholder="Enter Your Contact" v-model="restaurent.contact">
-    <input type="text" name="address" placeholder="Enter Your Address" v-model="restaurent.address">
+    <input type="text" name="name" placeholder="Enter Name" v-model="restaurent.name">
+    <input type="text" name="contact" placeholder="Enter Contact" v-model="restaurent.contact">
+    <input type="text" name="address" placeholder="Enter Address" v-model="restaurent.address">
     <button type="button" v-on:click="addRestaurent">Add New Restaurent</button>
   </form>
 
