@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <h1>Hello user welcome to Add Restaurent page</h1>
+  <h1>Welcome to Add Restaurent Page</h1>
 
   <form action="" method="post" class="add">
     <input type="text" name="name" placeholder="Enter Name" v-model="restaurent.name">

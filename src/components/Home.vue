@@ -1,15 +1,15 @@
 <template>
   <Header/>
-  <h1>Hello {{ name }} welcome to home page</h1>
+  <h1>⭐Hello {{ name }} Welcome to Home Page⭐</h1>
 
-  <table border="1">
+  <table border="1" class="middle">
     <tr>
-      <td>Id</td>
-      <td>Name</td>
-      <td>Contact</td>
-      <td>Address</td>
-      <td>Update</td>
-      <td>Delete</td>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Update</th>
+      <th>Delete</th>
     </tr>
     <tr v-for="item in restaurant" :key="item.id">
       <td>{{ item.id }}</td>
@@ -66,5 +66,9 @@ export default {
 td{
   width:140px;
   height: auto;
+}
+.middle{
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

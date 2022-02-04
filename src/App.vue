@@ -1,5 +1,5 @@
 <template>
-<router-view/>
+  <router-view/>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ body{
   padding: 0;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <h1>Hello user welcome to Update Restaurent page page</h1>
+  <h1>Welcome to Update Restaurent Page</h1>
 
   <form action="" method="post" class="add">
     <input type="text" name="name" placeholder="Enter Your Name" v-model="restaurent.name">
@@ -8,8 +8,6 @@
     <input type="text" name="address" placeholder="Enter Your Address" v-model="restaurent.address">
     <button type="button" v-on:click="updateRestaurent">Update Restaurent</button>
   </form>
-
-
 </template>
 
 <script>
