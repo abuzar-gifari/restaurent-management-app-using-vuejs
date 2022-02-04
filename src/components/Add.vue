@@ -8,8 +8,6 @@
     <input type="text" name="address" placeholder="Enter Address" v-model="restaurent.address">
     <button type="button" v-on:click="addRestaurent">Add New Restaurent</button>
   </form>
-
-
 </template>
 
 <script>
