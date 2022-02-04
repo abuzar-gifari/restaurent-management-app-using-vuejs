@@ -4,7 +4,6 @@
 <div class="nav">
   <router-link to="/">Home</router-link>
   <router-link to="/add">Add Restaurent</router-link>
-  <router-link to="/update">Update Restaurent</router-link>
   <a href="#" v-on:click="logout">Log Out</a>
 </div>
 
